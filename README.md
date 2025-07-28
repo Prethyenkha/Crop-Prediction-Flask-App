@@ -72,13 +72,6 @@ python app.py
 http://127.0.0.1:5000
 ```
 
----
-
-## 🎨 Screenshots
-*(Add screenshots here)*
-
----
-
 ## 🧠 Machine Learning Model
 - Algorithm: **Random Forest Classifier**  
 - Features: N, P, K, Temperature, Humidity, pH, Rainfall, State, Crop Price  
