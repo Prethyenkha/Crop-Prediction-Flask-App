@@ -1,0 +1,114 @@
+/* === Body and Page === */
+html {
+    overflow-y: auto; /* Allows vertical scroll */
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh; /* Ensures it grows with content */
+    margin: 0;
+    padding: 30px; /* Space for scrolling */
+}
+
+/* === Glass Container === */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 550px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* === Heading === */
+h2 {
+    color: #064420;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+/* === Form Layout === */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    text-align: left;
+    font-weight: 600;
+    color: #000;
+}
+
+/* === Inputs and Dropdown === */
+input, select {
+    width: 90%;
+    padding: 12px;
+    margin: 8px auto;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.6);
+    color: #000;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    display: block;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border: 1px solid #064420;
+    box-shadow: 0 0 6px rgba(6, 68, 32, 0.3);
+}
+
+input::placeholder {
+    color: #555;
+}
+
+/* === Button === */
+button {
+    background: #064420;
+    color: white;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 95%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #0b6e4f;
+    transform: translateY(-2px);
+}
+
+/* === Prediction Result Box === */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(204, 234, 187, 0.8);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2f5d62;
+}
+
+/* === Responsive Design for Smaller Screens === */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    input, select, button {
+        width: 100%;
+    }
+}

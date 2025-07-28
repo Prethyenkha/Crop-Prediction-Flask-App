@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>🌾 Indian Crop Prediction</h2>
+        <form method="POST">
+            <label>N (Nitrogen)</label>
+            <input type="number" name="N" required>
+
+            <label>P (Phosphorus)</label>
+            <input type="number" name="P" required>
+
+            <label>K (Potassium)</label>
+            <input type="number" name="K" required>
+
+            <label>Temperature (°C)</label>
+            <input type="number" step="0.01" name="temperature" required>
+
+            <label>Humidity (%)</label>
+            <input type="number" step="0.01" name="humidity" required>
+
+            <label>pH</label>
+            <input type="number" step="0.01" name="ph" required>
+
+            <label>Rainfall (mm)</label>
+            <input type="number" step="0.01" name="rainfall" required>
+
+            <label>State</label>
+            <select name="state" required>
+                {% for state in states %}
+                    <option value="{{ state }}">{{ state }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Crop Price</label>
+            <input type="number" name="crop_price" required>
+
+            <button type="submit">Predict Crop</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            🌱 Recommended Crop: <strong>{{ prediction }}</strong>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
