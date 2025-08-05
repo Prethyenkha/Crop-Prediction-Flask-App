@@ -71,6 +71,12 @@ python app.py
 ```
 http://127.0.0.1:5000
 ```
+---
+🖼️ App Preview
+
+<img width="1352" height="564" alt="Screenshot 2025-08-05 140451" src="https://github.com/user-attachments/assets/6b975afa-5a97-4900-a98e-fa27f6f300d5" />
+
+---
 
 ## 🧠 Machine Learning Model
 - Algorithm: **Random Forest Classifier**  
@@ -79,12 +85,3 @@ http://127.0.0.1:5000
 - Encoders: `LabelEncoder` for states and crops  
 - Scaling: StandardScaler  
 
----
-
-## 🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
-
----
-
-## 📜 License
-This project is open-source and available under the **MIT License**.
